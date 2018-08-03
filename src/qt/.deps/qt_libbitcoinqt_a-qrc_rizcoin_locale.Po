@@ -1,0 +1,1 @@
+qt/qt_libbitcoinqt_a-qrc_rizcoin_locale.o: qt/qrc_rizcoin_locale.cpp

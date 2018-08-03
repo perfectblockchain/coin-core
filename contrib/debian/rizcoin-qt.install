@@ -1,0 +1,6 @@
+usr/local/bin/rizcoin-qt usr/bin
+share/pixmaps/rizcoin32.xpm usr/share/pixmaps
+share/pixmaps/rizcoin16.xpm usr/share/pixmaps
+share/pixmaps/rizcoin128.png usr/share/pixmaps
+debian/rizcoin-qt.desktop usr/share/applications
+debian/rizcoin-qt.protocol usr/share/kde4/services/

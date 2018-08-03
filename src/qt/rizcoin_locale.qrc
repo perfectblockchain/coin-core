@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/rizcoin_bg.qm</file>
+        <file alias="de">locale/rizcoin_de.qm</file>
+        <file alias="en">locale/rizcoin_en.qm</file>
+        <file alias="es">locale/rizcoin_es.qm</file>
+        <file alias="fi">locale/rizcoin_fi.qm</file>
+        <file alias="fr">locale/rizcoin_fr.qm</file>
+        <file alias="it">locale/rizcoin_it.qm</file>
+        <file alias="ja">locale/rizcoin_ja.qm</file>
+        <file alias="pl">locale/rizcoin_pl.qm</file>
+        <file alias="pt">locale/rizcoin_pt.qm</file>
+        <file alias="ru">locale/rizcoin_ru.qm</file>
+        <file alias="sk">locale/rizcoin_sk.qm</file>
+        <file alias="sv">locale/rizcoin_sv.qm</file>
+        <file alias="vi">locale/rizcoin_vi.qm</file>
+        <file alias="zh_CN">locale/rizcoin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/rizcoin_zh_TW.qm</file>
+    </qresource>
+</RCC>

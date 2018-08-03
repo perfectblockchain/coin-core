@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Rizcoin
+Comment=Rizcoin P2P Cryptocurrency
+Comment[fr]=Rizcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Rizcoin, eşten eşe kriptografik sanal para birimi
+Exec=rizcoin-qt %u
+Terminal=false
+Type=Application
+Icon=rizcoin128
+MimeType=x-scheme-handler/rizcoin;
+Categories=Office;Finance;
