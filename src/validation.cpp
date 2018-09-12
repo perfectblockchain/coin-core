@@ -1231,91 +1231,28 @@ NOTE:   unlike bitcoin we are using PREVIOUS block height here,
 */
 CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params& consensusParams, bool fSuperblockPartOnly)
 {
-    // if (nPrevHeight > 10000000) {
-    //     return 0;
-    // }
-
-    // // @GABI
-    // if (nPrevHeight < 104)
-    //     return 30000000 * COIN;
-
-    // if (nPrevHeight == 104)
-    //     return 3000000 * COIN;
-
-    // int halvings = nPrevHeight / consensusParams.nSubsidyHalvingInterval;
-
-    // CAmount nSubsidyBase;
-	// if(nPrevHeight <= 58210) { // before july 13
-	// 	nSubsidyBase = 1000;    
-	// } else if(nPrevHeight <= 66850) { // before july 19
-	// 	nSubsidyBase = 500;
-	// }else if(nPrevHeight <= 75490){	// before july 25
-	// 	nSubsidyBase = 250;
-	// }else if(nPrevHeight <= 84130){	// before july 31
-	// 	nSubsidyBase = 125;
-	// }else {
-    //     nSubsidyBase = 62.5;
-	// }
-
-    // CAmount nSubsidy = nSubsidyBase * COIN;
-    // return nSubsidy;
+    if (nPrevHeight > 14296000) {
+        return 0;
+    }
 
     // @GABI
     if (nPrevHeight < 104)
-        return 10000000 * COIN;
+        return 30000000 * COIN;
 
     if (nPrevHeight == 104)
         return 3000000 * COIN;
 
-    //if (nPrevHeight < 10)
-    //    return 100000000 * COIN;
-
-    //if (nPrevHeight == 10)
-    //    return 1043000000 * COIN;
-
     int halvings = nPrevHeight / consensusParams.nSubsidyHalvingInterval;
 
-    // Force block reward to zero when right shift is undefined.
-    if (halvings >= 64)
-        return 0;
-
-    CAmount nSubsidy = 1000 * COIN; // @GABI 
-
-    if (nPrevHeight >= 143000){
-        CAmount nSubsidy = 125 * COIN; // @GABI 
-    }
-
-    nSubsidy >>= halvings;
-    return nSubsidy;
-
-	/* @GABI
-    // double dDiff;
     CAmount nSubsidyBase;
-
-	if (nPrevHeight <= 1000)
-		return 1000000 * COIN;
-
-
-	if(nPrevHeight <= 7200) {
-		nSubsidyBase = 1000; // Gouvernance	RIZ
-	}else if((nPrevHeight > 12500) & (nPrevHeight <= 14000)){		
-		nSubsidyBase = 1000; // Gouvernance	RIZ
+	if(nPrevHeight <= 150000) { // before 2018.09.18
+		nSubsidyBase = 1000;    
 	}else {
-		if((nPrevHeight > 7200) & (nPrevHeight <= 270000)) nSubsidyBase = 10; 	
-		if((nPrevHeight > 270000) & (nPrevHeight <= 532800)) nSubsidyBase = 8; 
-		if((nPrevHeight > 532800) & (nPrevHeight <= 1058400)) nSubsidyBase = 6; 
-		if((nPrevHeight > 1058400) & (nPrevHeight <= 1584000)) nSubsidyBase = 4; 
-		if(nPrevHeight > 1584000) nSubsidyBase = 2; // After	
+        nSubsidyBase = 125;
 	}
-  
-    // LogPrintf("height %u diff %4.2f reward %d\n", nPrevHeight, dDiff, nSubsidyBase);
-    CAmount nSubsidy = nSubsidyBase * COIN;  
 
-    // Hard fork to reduce the block reward by 10 extra percent (allowing budget/superblocks)
-    CAmount nSuperblockPart = (nPrevHeight > consensusParams.nBudgetPaymentsStartBlock) ? nSubsidy/10 : 0;
-
-    return fSuperblockPartOnly ? nSuperblockPart : nSubsidy - nSuperblockPart;
-	*/
+    CAmount nSubsidy = nSubsidyBase * COIN;
+    return nSubsidy;
 }
 
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
