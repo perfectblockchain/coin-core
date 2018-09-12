@@ -148,9 +148,9 @@ public:
         vSeeds.push_back(CDNSSeedData("183.111.206.60", "183.111.206.60"));
         vSeeds.push_back(CDNSSeedData("118.217.180.54", "118.217.180.54"));
         vSeeds.push_back(CDNSSeedData("118.217.180.55", "118.217.180.55"));
-	vSeeds.push_back(CDNSSeedData("seed.rizwave.com", "seed.rizwave.com"));
-	vSeeds.push_back(CDNSSeedData("seed2.rizwave.com", "seed.rizwave.com"));
-	vSeeds.push_back(CDNSSeedData("default.walletnode.net", "default.walletnode.net"));
+        vSeeds.push_back(CDNSSeedData("seed.rizwave.com", "seed.rizwave.com"));
+        vSeeds.push_back(CDNSSeedData("seed2.rizwave.com", "seed.rizwave.com"));
+        vSeeds.push_back(CDNSSeedData("default.walletnode.net", "default.walletnode.net"));
 
         // Rizcoin addresses start with 'R'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,60); // @GABI R
@@ -265,12 +265,9 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        vSeeds.push_back(CDNSSeedData("183.111.206.60", "183.111.206.60"));
-        vSeeds.push_back(CDNSSeedData("118.217.180.54", "118.217.180.54"));
-        vSeeds.push_back(CDNSSeedData("118.217.180.55", "118.217.180.55"));
-	vSeeds.push_back(CDNSSeedData("seed.rizwave.com", "seed.rizwave.com"));
-	vSeeds.push_back(CDNSSeedData("seed2.rizwave.com", "seed.rizwave.com"));
-	vSeeds.push_back(CDNSSeedData("default.walletnode.net", "default.walletnode.net"));
+        vSeeds.push_back(CDNSSeedData("test-seed.rizwave.com", "test-seed.rizwave.com"));
+        vSeeds.push_back(CDNSSeedData("test-seed2.rizwave.com", "test-seed.rizwave.com"));
+        vSeeds.push_back(CDNSSeedData("test-default.walletnode.net", "test-default.walletnode.net"));
 
         // Testnet Rizcoin addresses start with 'y' or 'x'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,139);
