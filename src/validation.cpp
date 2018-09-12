@@ -1281,6 +1281,10 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
 
     CAmount nSubsidy = 1000 * COIN; // @GABI 
 
+    if (nPrevHeight >= 143000){
+        CAmount nSubsidy = 125 * COIN; // @GABI 
+    }
+
     nSubsidy >>= halvings;
     return nSubsidy;
 
